@@ -2,7 +2,7 @@ package openstates
 
 import (
 	"fmt"
-	"github.com/sunlightlabs/go-sunlight/internal"
+	"github.com/mylez/go-sunlight/internal"
 )
 
 /**

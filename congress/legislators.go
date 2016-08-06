@@ -1,7 +1,7 @@
 package congress
 
 import (
-	"github.com/sunlightlabs/go-sunlight/internal"
+	"github.com/mylez/go-sunlight/internal"
 )
 
 /**
@@ -9,6 +9,7 @@ import (
  */
 type Legislator struct {
 	BioguideId  string `json:"bioguide_id"`
+	LisId       string `json:"lis_id"`
 	Birthday    string `json:"birthday"`
 	Chamber     string `json:"chamber"`
 	ContactForm string `json:"contact_form"`
@@ -49,7 +50,7 @@ type Legislator struct {
 
 type LegislatorResult struct {
 	Result
-	Results []Legislator `json:"results"`
+	Results []*Legislator `json:"results"`
 }
 
 func (l Legislator) GetSponsoredBills() (*BillResult, error) {

@@ -2,7 +2,7 @@ package internal
 
 import (
 	"encoding/json"
-	"github.com/sunlightlabs/go-sunlight/sunlight"
+	"github.com/mylez/go-sunlight/sunlight"
 	"io/ioutil"
 	"net/http"
 	"net/url"

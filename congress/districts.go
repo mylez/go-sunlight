@@ -2,7 +2,7 @@ package congress
 
 import (
 	"fmt"
-	"github.com/sunlightlabs/go-sunlight/internal"
+	"github.com/mylez/go-sunlight/internal"
 )
 
 type District struct {

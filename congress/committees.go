@@ -1,7 +1,7 @@
 package congress
 
 import (
-	"github.com/sunlightlabs/go-sunlight/internal"
+	"github.com/mylez/go-sunlight/internal"
 )
 
 type Committee struct {
