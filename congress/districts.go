@@ -28,3 +28,15 @@ func GetDistrictsByLatLon(lat float32, lon float32) (*DistrictResult, error) {
 	}
 	return &l, nil
 }
+
+func GetDistrictsByZip(zip string) (*DistrictResult, error) {
+	var params = map[string]string{
+		"zip":  zip,
+	}
+	l := DistrictResult{}
+	err := internal.GetURL(&l, congressRoot, params, "districts", "locate")
+	if err != nil {
+		return nil, err
+	}
+	return &l, nil
+}

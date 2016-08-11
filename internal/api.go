@@ -9,6 +9,8 @@ import (
 	"strings"
 )
 
+import "log"
+
 func GenerateURL(root string, resource ...string) string {
 	ret := root + "/" + strings.Join(resource, "/")
 	return ret
@@ -23,6 +25,7 @@ func QueryURL(root string, params map[string]string, resource ...string) string 
 	return uri
 }
 
+
 func GetURL(target interface{}, root string, params map[string]string, resource ...string) (err error) {
 	url := QueryURL(root, params, resource...)
 	res, err := http.Get(url)
@@ -30,6 +33,7 @@ func GetURL(target interface{}, root string, params map[string]string, resource 
 		return
 	}
 	body, err := ioutil.ReadAll(res.Body)
+	log.Println(string(body))
 	if err != nil {
 		return
 	}
